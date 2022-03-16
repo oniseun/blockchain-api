@@ -5,7 +5,6 @@ import { BlockchainModule } from './blockchain/blockchain.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
-// import GraphQLJSON from 'graphql-type-json';
 const isDev = !['staging', 'production'].includes(process.env.NODE_ENV);
 @Module({
   imports: [
@@ -22,7 +21,6 @@ const isDev = !['staging', 'production'].includes(process.env.NODE_ENV);
       debug: isDev,
       playground: isDev,
       autoSchemaFile: true,
-     // resolvers: { JSON: GraphQLJSON },
     }),
   ],
   controllers: [AppController],
