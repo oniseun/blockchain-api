@@ -36,7 +36,7 @@ $ npm install
 ```bash
 #Create .env file and add the following
 $ PORT=2022
-$ CURRENCY_CONVERTER_URL=http://blockchain.info
+$ BLOCKCHAIN_URL=http://blockchain.info
 $ REDIS_HOST=<redis host: leave black if local >
 $ REDIS_PORT=
 $ CACHE_TTL=7200
@@ -45,24 +45,15 @@ $ MAX_ITEM_IN_CACHE=100
 ## `Docker run locally`
 
 ```bash
-# EXPORT data.fixer.io environment variable
-$ EXPORT CURRENCY_CONVERTER_ACCESS_KEY=**your data.fixer.io ACCESS KEY**
+# EXPORT blockchain environment variable
+$ EXPORT BLOCKCHAIN_URL=https://blockchain.info
 
-# Build the image and run Locally with docker compose
-
-$ docker compose up
-
-#  backend server: **http://localhost:2022**
-#  graphql server: **http://localhost:2022/graphql**
-#  redis-commander: **http://localhost:8081**
-#  Backend server, redis server ans redis commander will be on the same virtual network on your local systme
-```
 
 ## `Docker run in production`
 ```bash
 # ensure to set all environment variables in your virtual host as production will not use .env file for environment variables
 # Build the image 
-$ docker build -t  brndbsdr-backend-prod  -f Dockerfile.prod .
+$ docker build -t  blockchain-backend-prod  -f Dockerfile.prod .
 ```
 ## `Run with npm`
 ```bash
