@@ -32,7 +32,7 @@ services:
             context: ./backend
             dockerfile: Dockerfile
         ports:
-        - "2020:2020"
+        - "2022:2022"
         links:
             - redis
         environment:
@@ -52,7 +52,7 @@ services:
         ports:
             - "3000:3000"
         environment:
-            - REACT_APP_API_ENDPOINT=http://localhost:2020
+            - REACT_APP_API_ENDPOINT=http://localhost:2022
         networks:
             nuri-network:
                 ipv4_address: 172.27.0.23
