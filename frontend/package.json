@@ -19,8 +19,6 @@
     "lodash": "^4.17.21",
     "react": "16",
     "react-bootstrap": "^1.6.0",
-    "react-bootstrap-table-next": "^4.0.3",
-    "react-bootstrap-table2-paginator": "^2.1.2",
     "react-dom": "16",
     "react-scripts": "4.0.3",
     "sinon": "^10.0.0",
