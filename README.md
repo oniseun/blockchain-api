@@ -3,9 +3,9 @@
 > Entry point to start the blockchain-fullstack server
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/8212534/158582944-1f27b0ff-c797-4517-a7ab-99deae9f2b83.jpeg" width="540" alt="Latest Blocks" /> <br/>
-  <img src="https://user-images.githubusercontent.com/8212534/158582932-1ee2a71c-dfb1-4572-a20b-d87034d82242.png" width="540" alt="Block Detail" /> <br/>
-  <img src="https://user-images.githubusercontent.com/8212534/158582913-62168511-a457-4b35-a27a-118288f4a062.jpg" width="540" alt="Block transactions" /> <br/>
+  <img src="https://user-images.githubusercontent.com/8212534/158582944-1f27b0ff-c797-4517-a7ab-99deae9f2b83.jpeg" width="640" alt="Latest Blocks" /> <br/>
+  <img src="https://user-images.githubusercontent.com/8212534/158582932-1ee2a71c-dfb1-4572-a20b-d87034d82242.png" width="640" alt="Block Detail" /> <br/>
+  <img src="https://user-images.githubusercontent.com/8212534/158582913-62168511-a457-4b35-a27a-118288f4a062.jpg" width="640" alt="Block transactions" /> <br/>
 </p>
 
 ## Build Setup
