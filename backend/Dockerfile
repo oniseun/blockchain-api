@@ -7,6 +7,6 @@ RUN npm install --production=false
 COPY . .
 COPY .envsample ./.env
 
-EXPOSE 2020
+EXPOSE 2022
 
 CMD ["npm","run", "start:debug"]
