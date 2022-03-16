@@ -3,9 +3,9 @@
 > Entry point to start the blockchain-fullstack server
 
 <p align="center">
-  <img src="https://awesomescreenshot.s3.amazonaws.com/image/1532933/24156874-0f4b99e234c52180baba5d056627869f.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20220316%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220316T102606Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=6b790e7fc377e6e5f57e6d9054f98fd234109f2ccc04789d807cceb7e69ea878" width="320" alt="Latest Blocks" /> <br/>
-  <img src="https://drive.google.com/file/d/1XXd6A4xZv22DxpmECTt-G7Iisg4a5G7C/view" width="540" alt="Block Detail" /> <br/>
-  <img src="https://drive.google.com/file/d/1Ef5BK4lW5HsL6Gzl9Mzr_Do6E0mguQSQ/view" width="540" alt="Block transactions" /> <br/>
+  <img src="https://user-images.githubusercontent.com/8212534/158582944-1f27b0ff-c797-4517-a7ab-99deae9f2b83.jpeg" width="540" alt="Latest Blocks" /> <br/>
+  <img src="https://user-images.githubusercontent.com/8212534/158582932-1ee2a71c-dfb1-4572-a20b-d87034d82242.png" width="540" alt="Block Detail" /> <br/>
+  <img src="https://user-images.githubusercontent.com/8212534/158582913-62168511-a457-4b35-a27a-118288f4a062.jpg" width="540" alt="Block transactions" /> <br/>
 </p>
 ## Build Setup
 
@@ -22,8 +22,16 @@ then go to http://localhost:3000
 # RUN with npm
 
 # Install node_modules
+$ create .env files for both /frontend and /backend folder from .envsample
 $ chmod +x install.sh && ./install.sh
 $ chmod +x start-server.sh && ./start-server.sh
+## Test
+
+# run tests for backend
+$ cd /backend && npm run test
+
+# run tests for frontend
+$ cd /frontend && yarn test
 
 # Postman collection and envrironment folder
 $ /postman/
