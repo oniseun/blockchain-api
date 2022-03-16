@@ -2,6 +2,11 @@
 
 > Entry point to start the blockchain-fullstack server
 
+<p align="center">
+  <img src="https://tinyurl.com/y7634ryu" width="320" alt="Latest Blocks" /> <br/>
+  <img src="https://tinyurl.com/ycmvpvps" width="320" alt="Block Detail" /> <br/>
+  <img src="https://tinyurl.com/yblqeq57" width="320" alt="Block transactions" /> <br/>
+</p>
 ## Build Setup
 
 - Install docker and docker-compose
@@ -9,8 +14,6 @@
 ``` bash
 
 # RUN with docker easily (recommended)
-
-# EXPORT blockchain environment variable and run docker compose
 $ export BLOCKCHAIN_URL=https://blockchain.info && docker-compose up
 
 then go to http://localhost:3000
