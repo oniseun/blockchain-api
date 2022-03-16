@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "c69d1252-2e83-4566-9826-bd8a59581fab",
+		"name": "Blockchain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "graphql",
+			"item": [
+				{
+					"name": "getBlocks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n    getBlocks {\n        hash\n        height\n        time\n        block_index\n    }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{API_ENDPOINT}}/graphql",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBlockDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n    getBlockDetail {\n          size\n          block_index\n          prev_block\n          hash\n          tx {\n                hash\n                size\n                fee\n                relayed_by\n                time\n          }\n    }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{API_ENDPOINT}}/graphql",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getBlockDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_ENDPOINT}}/block/detail/00000000000000000000739e74727078837e6699f905d71a17c3167fdce741d2",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"block",
+						"detail",
+						"00000000000000000000739e74727078837e6699f905d71a17c3167fdce741d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_ENDPOINT}}/location/details",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"location",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

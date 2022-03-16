@@ -1,0 +1,67 @@
+
+version: "3.7"
+services:
+    redis:
+        container_name: redis-net
+        image: redis
+        networks:
+            nuri-network:
+                ipv4_address: 172.27.0.20
+                aliases:
+                - redis.net.local
+
+    redis-commander:
+        container_name: redis-commander-net
+        hostname: redis-commander-net
+        image: rediscommander/redis-commander:latest
+        ports:
+            - "8081:8081"
+        links:
+            - redis
+        environment:
+        - REDIS_HOSTS=redis
+        networks:
+            nuri-network:
+                ipv4_address: 172.27.0.21
+                aliases:
+                - redis-commander.net.local
+
+    backend:
+        container_name: nuri-backend
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        ports:
+        - "2020:2020"
+        links:
+            - redis
+        environment:
+            - REDIS_HOST=redis
+            - BLOCKCHAIN_URL=${BLOCKCHAIN_URL}
+        networks:
+            nuri-network:
+                ipv4_address: 172.27.0.22
+                aliases:
+                - nuri-backend.local
+
+    frontend:
+        container_name: nuri-frontend
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+        environment:
+            - REACT_APP_API_ENDPOINT=http://localhost:2020
+        networks:
+            nuri-network:
+                ipv4_address: 172.27.0.23
+                aliases:
+                    - nuri-frontend.local
+
+networks:
+    nuri-network:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.27.0.0/16
