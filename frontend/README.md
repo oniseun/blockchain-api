@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## SET The api endpoint in the .env.local or .env variable or your task/container definition
 ``` bash
-# REACT_APP_API_ENDPOINT=http://localhost:2020
+# REACT_APP_API_ENDPOINT=http://localhost:2022
 $ export REACT_APP_API_ENDPOINT=http://localhost:2022
 
 ```
