@@ -8,10 +8,12 @@
 
 ``` bash
 
-# RUN with docker (recommended)
+# RUN with docker easily (recommended)
 
 # EXPORT blockchain environment variable and run docker compose
 $ export BLOCKCHAIN_URL=https://blockchain.info && docker-compose up
+
+then go to http://localhost:3000
 
 
 # RUN with npm

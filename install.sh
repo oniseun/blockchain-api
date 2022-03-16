@@ -1,7 +1,7 @@
 function run() {
  cd backend/ && npm i
  cd ..
- cd frontend/ && yarn i
+ cd frontend/ && yarn
 }
 
 if [ -z $@ ]; then

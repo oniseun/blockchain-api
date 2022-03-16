@@ -1,7 +1,5 @@
 import { Pagination, Table } from "react-bootstrap";
 
-
-
 import  { useState } from "react";
 
 function PaginationComponent(props: any) {
@@ -14,7 +12,7 @@ function PaginationComponent(props: any) {
         pages.push(
         <Pagination.Item key={number} active={number === currentPage} onClick={() => setCurrentPage(number)}>
             {number}
-          </Pagination.Item>,
+        </Pagination.Item>,
         );
     }
   
